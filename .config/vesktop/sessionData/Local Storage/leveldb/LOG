@@ -1,0 +1,69 @@
+2025/08/17-15:24:47.456 18fb1 Reusing MANIFEST /home/abubakr/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2025/08/17-15:24:47.725 18fb1 Recovering log #8
+2025/08/17-15:24:47.991 18fb1 Reusing old log /home/abubakr/.config/vesktop/sessionData/Local Storage/leveldb/000008.log 
+2025/08/17-16:19:01.806 18fb2 Level-0 table #12: started
+2025/08/17-16:19:01.875 18fb2 Level-0 table #12: 42145 bytes OK
+2025/08/17-16:19:01.900 18fb2 Delete type=0 #8
+2025/08/17-21:11:28.761 18fb2 Level-0 table #14: started
+2025/08/17-21:11:28.850 18fb2 Level-0 table #14: 49983 bytes OK
+2025/08/17-21:11:28.953 18fb2 Delete type=0 #11
+2025/08/18-12:16:56.602 18fb2 Level-0 table #16: started
+2025/08/18-12:16:56.665 18fb2 Level-0 table #16: 44963 bytes OK
+2025/08/18-12:16:56.689 18fb2 Delete type=0 #13
+2025/08/18-12:16:56.701 18fb2 Compacting 4@0 + 1@1 files
+2025/08/18-12:16:56.799 18fb2 Generated table #17@0: 20 keys, 18232 bytes
+2025/08/18-12:16:56.799 18fb2 Compacted 4@0 + 1@1 files => 18232 bytes
+2025/08/18-12:16:56.823 18fb2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/08/18-12:16:56.824 18fb2 Delete type=2 #14
+2025/08/18-12:16:56.824 18fb2 Delete type=2 #7
+2025/08/18-12:16:56.824 18fb2 Delete type=2 #12
+2025/08/18-12:16:56.824 18fb2 Delete type=2 #16
+2025/08/18-12:16:56.824 18fb2 Delete type=2 #9
+2025/08/18-21:27:02.156 18fb2 Level-0 table #19: started
+2025/08/18-21:27:02.245 18fb2 Level-0 table #19: 41585 bytes OK
+2025/08/18-21:27:02.271 18fb2 Delete type=0 #15
+2025/08/19-13:43:14.064 18fb2 Level-0 table #21: started
+2025/08/19-13:43:14.123 18fb2 Level-0 table #21: 43544 bytes OK
+2025/08/19-13:43:14.148 18fb2 Delete type=0 #18
+2025/08/19-23:05:14.862 18fb2 Level-0 table #23: started
+2025/08/19-23:05:14.924 18fb2 Level-0 table #23: 52716 bytes OK
+2025/08/19-23:05:14.950 18fb2 Delete type=0 #20
+2025/08/21-08:03:49.517 18fb1 Level-0 table #25: started
+2025/08/21-08:03:49.566 18fb1 Level-0 table #25: 44234 bytes OK
+2025/08/21-08:03:49.594 18fb1 Delete type=0 #22
+2025/08/21-08:03:49.609 18fb1 Compacting 4@0 + 1@1 files
+2025/08/21-08:03:49.743 18fb1 Generated table #26@0: 23 keys, 22107 bytes
+2025/08/21-08:03:49.743 18fb1 Compacted 4@0 + 1@1 files => 22107 bytes
+2025/08/21-08:03:49.825 18fb1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/08/21-08:03:49.826 18fb1 Delete type=2 #17
+2025/08/21-08:03:49.826 18fb1 Delete type=2 #21
+2025/08/21-08:03:49.827 18fb1 Delete type=2 #25
+2025/08/21-08:03:49.827 18fb1 Delete type=2 #23
+2025/08/21-08:03:49.827 18fb1 Delete type=2 #19
+2025/08/22-11:10:54.397 18fb2 Level-0 table #28: started
+2025/08/22-11:10:54.435 18fb2 Level-0 table #28: 43720 bytes OK
+2025/08/22-11:10:54.465 18fb2 Delete type=0 #24
+2025/08/23-09:46:41.169 18fb2 Level-0 table #30: started
+2025/08/23-09:46:41.235 18fb2 Level-0 table #30: 35970 bytes OK
+2025/08/23-09:46:41.260 18fb2 Delete type=0 #27
+2025/08/24-19:30:56.557 18fb2 Level-0 table #32: started
+2025/08/24-19:30:56.591 18fb2 Level-0 table #32: 26081 bytes OK
+2025/08/24-19:30:56.619 18fb2 Delete type=0 #29
+2025/08/25-11:47:15.026 18fb1 Level-0 table #34: started
+2025/08/25-11:47:15.105 18fb1 Level-0 table #34: 36263 bytes OK
+2025/08/25-11:47:15.130 18fb1 Delete type=0 #31
+2025/08/25-11:47:15.149 18fb1 Compacting 4@0 + 1@1 files
+2025/08/25-11:47:15.207 18fb1 Generated table #35@0: 24 keys, 21698 bytes
+2025/08/25-11:47:15.207 18fb1 Compacted 4@0 + 1@1 files => 21698 bytes
+2025/08/25-11:47:15.252 18fb1 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/08/25-11:47:15.252 18fb1 Delete type=2 #32
+2025/08/25-11:47:15.252 18fb1 Delete type=2 #26
+2025/08/25-11:47:15.252 18fb1 Delete type=2 #30
+2025/08/25-11:47:15.252 18fb1 Delete type=2 #34
+2025/08/25-11:47:15.252 18fb1 Delete type=2 #28
+2025/08/26-20:02:08.637 18fb2 Level-0 table #37: started
+2025/08/26-20:02:08.662 18fb2 Level-0 table #37: 20108 bytes OK
+2025/08/26-20:02:08.687 18fb2 Delete type=0 #33
+2025/08/27-13:26:59.964 18fb2 Level-0 table #39: started
+2025/08/27-13:27:00.047 18fb2 Level-0 table #39: 34355 bytes OK
+2025/08/27-13:27:00.073 18fb2 Delete type=0 #36
