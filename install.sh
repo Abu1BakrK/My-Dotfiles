@@ -1,10 +1,12 @@
 #!/bin/bash
 
-#1.0.1
+VER="v1.0.3"
 
-set -e                                                            #ends if failed
-LOG_FILE="$HOME/arch-setup.log"                                   #LOG_FILE is variable
-echo "=== Arch Setup Inialized: $(date) ===" | tee -a "$LOG_FILE" #shows that it started and starts writing to the log file
+set -e                                                                      #ends if failed
+trap 'echo "!!! Arch Setup FAILED at $(date) !!!" | tee -a "$LOG_FILE"' ERR #failiure message
+LOG_FILE="$HOME/arch-setup.log"                                             #LOG_FILE is variable
+echo "=== Arch Setup Initializing: $(date) ===" | tee -a "$LOG_FILE"        #shows that it started and starts writing to the log file
+echo "$VER" | tee -a "$LOG_FILE"
 
 #update system
 echo "Updating system..." | tee -a "$LOG_FILE"
@@ -12,7 +14,7 @@ sudo pacman -Syu --noconfirm &>>"$LOG_FILE" #runs command then apends bot error 
 
 #dependeices install
 echo "Downloading dependencies..." | tee -a "$LOG_FILE"
-sudo pacman -S --noconfirm hyprland git base-devel rsync neovim networkmanger man-db zsh btop fzf xorg mesa curl wget atool gzip unzip tar aunpack unrar udiskie fastfetch feh &>>"$LOG_FILE"
+sudo pacman -S --noconfirm hyprland git base-devel rsync neovim networkmanager man-db zsh btop fzf xorg mesa curl wget atool gzip unzip tar aunpack unrar udiskie fastfetch feh &>>"$LOG_FILE"
 
 #yay install
 if ! command -v yay &>/dev/null; then #checks if yay is installed adn sends output to the void ie /dev/null
@@ -30,6 +32,22 @@ fi
 #yay start up
 echo "Inializing yay..." | tee -a "$LOG_FILE"
 yay -Y --gendb && yay -Syu --devel && yay -Y --devel --save &>>"$LOG_FILE"
+
+#Pacman.conf changes
+echo "Tweaking /etc/pacman.conf..." | tee -a "$LOG_FILE"
+# Enable colors and ILoveCandy
+sudo sed -i 's/^#Color/Color/' /etc/pacman.conf &>>"$LOG_FILE"
+grep -qxF 'ILoveCandy' /etc/pacman.conf || echo 'ILoveCandy' | sudo tee -a /etc/pacman.conf
+sudo sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf # Enable multilib repo (uncomment both lines)
+#Increses ParallelDownloads to 10
+if grep -q '^#ParallelDownloads' /etc/pacman.conf; then
+  sudo sed -i 's/^#ParallelDownloads.*/ParallelDownloads = 10/' /etc/pacman.conf #uncomment the line
+elif grep -q '^ParallelDownloads' /etc/pacman.conf; then
+  sudo sed -i 's/^ParallelDownloads.*/ParallelDownloads = 10/' /etc/pacman.conf #if not commented overoride it with 10
+else
+  echo 'ParallelDownloads = 10' | sudo tee -a /etc/pacman.conf #add lines if it not there
+fi
+sudo pacman -Sy --noconfirm &>>"$LOG_FILE" #sync all packages
 
 #everything else
 echo "Installing all packages..." | tee -a "$LOG_FILE"
@@ -62,7 +80,7 @@ git clone "$DOTFILES_REPO" "$HOME/Dotfiles" &>>"$LOG_FILE"
 
 echo "Stowing dotfiles..." | tee -a "$LOG_FILE"
 cd "$HOME/Dotfiles"
-stow . --override &>>"$LOG_FILE"
+stow . --override="*" &>>"$LOG_FILE"
 cd ~
 
 #enabling madatory services
@@ -73,3 +91,6 @@ systemctl enable --now pipewire &>>"$LOG_FILE"
 
 #finished messages if all works well
 echo "=== Arch Setup Inialized: $(date) ===" | tee -a "$LOG_FILE"
+
+#reboots system
+sudo reboot
