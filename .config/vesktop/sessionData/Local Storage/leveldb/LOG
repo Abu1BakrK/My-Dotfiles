@@ -1,3 +1,6 @@
 2025/09/01-23:42:48.756 cdf42 Reusing MANIFEST /home/abubakr/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
 2025/09/01-23:42:48.772 cdf42 Recovering log #38
 2025/09/01-23:42:48.772 cdf42 Reusing old log /home/abubakr/.config/vesktop/sessionData/Local Storage/leveldb/000038.log 
+2025/09/02-12:32:04.657 cdf43 Level-0 table #42: started
+2025/09/02-12:32:04.717 cdf43 Level-0 table #42: 33247 bytes OK
+2025/09/02-12:32:04.742 cdf43 Delete type=0 #38
